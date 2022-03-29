@@ -1,0 +1,609 @@
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+  color: #191826;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fcfaf9;
+  width: 23.4375rem;
+  height: 121.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 17.5875rem;
+  height: 30rem;
+  left: 6.25rem;
+  top: -6.5rem;
+  background-image: url(assets/bg-main-mobile.png);
+  background-size: cover;
+}
+
+.section-logo-img {
+  width: 9.1312rem;
+  align-self: start;
+  margin-top: 2.25rem;
+  margin-bottom: 4rem;
+  margin-left: 0.5rem;
+}
+.section-text {
+  width: 20.4375rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.25rem;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: -0.45px;
+  color: #191826;
+  margin-bottom: 1.25rem;
+}
+
+.text {
+  line-height: 1.625rem;
+  color: #191826;
+}
+
+.pricing-section {
+  position: relative;
+  margin-top: 7.5rem;
+}
+
+.pricing-bg-img-1 {
+  background-color: black;
+  padding: 2em;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: relative;
+}
+
+.mockup-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6.875rem;
+}
+
+.mockup-img {
+  width: 65%;
+}
+
+.pricing {
+  width: 23.4375rem;
+  height: 34.125rem;
+  background-color: #fa7453;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 95%;
+  margin-top: -3.125rem;
+}
+
+.pricing-block {
+  width: 18.875rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pricing-header {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #fcfaf9;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #fcfaf9;
+  margin-bottom: 2.25rem;
+}
+
+.pricing-price {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: -0.2px;
+  color: #fcfaf9;
+  margin-bottom: 2rem;
+}
+
+.pricing-price span {
+  font-weight: 700;
+  font-size: 4.0625rem;
+  line-height: 3.25rem;
+  color: #fcfaf9;
+}
+
+.btn-ios:link,
+.btn-ios:visited,
+.btn-android:link,
+.btn-android:visited {
+  width: 18.5rem;
+  height: 3.8125rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: -0.18px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-ios:link,
+.btn-ios:visited {
+  background-color: #191826;
+  color: #fcfaf9;
+  margin-bottom: 1rem;
+}
+
+.btn-ios:hover,
+.btn-ios:focus {
+  background-color: #66e2dc;
+}
+
+.ios-icon {
+  width: 1.0675rem;
+  height: 1.25rem;
+  color: #fcfaf9;
+  margin-bottom: 0.25rem;
+}
+
+.btn-android:link,
+.btn-android:visited {
+  color: #191826;
+  background-color: #fcfaf9;
+}
+
+.btn-android:hover,
+.btn-android:active {
+  background-color: #ffb964;
+}
+
+.android-icon {
+  width: 1.0675rem;
+  height: 1.25rem;
+}
+
+.footer {
+  height: 34.375rem;
+  width: 23.4375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  bottom: -17%;
+}
+
+.footer-block {
+  width: 18.875rem;
+  height: 10.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-block .section-logo-img {
+  margin-top: 0;
+  margin-bottom: 2.25rem;
+  margin-left: 0;
+}
+
+.footer-text {
+  line-height: 1.625rem;
+  color: #191826;
+  margin-bottom: 4rem;
+}
+
+.footer-text a {
+  font-weight: 700;
+  color: #191826;
+  text-decoration: none;
+}
+
+.social-media-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  margin-left: 2.25rem;
+  gap: 1.25rem;
+}
+.fa-brands {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all 0.3s;
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-twitter {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-facebook-f {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: black;
+  color: white;
+  align-items: flex-end;
+  margin-top: 1px;
+}
+
+.fa-instagram,
+.fa-twitter {
+  align-items: center;
+}
+
+.fa-facebook-f:hover {
+  background-color: #ffb964;
+}
+
+.fa-instagram:hover,
+.fa-twitter:hover {
+  color: #ffb964;
+}
+
+@media (min-device-width: 600px) {
+  .container::before {
+    content: "";
+    position: absolute;
+    width: 18.75rem;
+    height: 29.25rem;
+    background-image: url(assets/bg-pattern-1.svg);
+    left: 31.25rem;
+    top: -3.125rem;
+    z-index: 2;
+  }
+
+  .container {
+    width: 48rem;
+    height: 111.3125rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 48rem;
+    height: 48rem;
+    left: 0;
+    top: -9.375rem;
+    background-image: url(assets/bg-main-tablet.png);
+    background-position-x: right;
+    z-index: 1;
+  }
+
+  .section-header {
+    width: 48rem;
+  }
+
+  .section-logo-img {
+    height: 11.8125rem;
+    margin-left: 2rem;
+    margin-top: 3.875rem;
+    margin-bottom: 0;
+  }
+
+  .section-text {
+    width: 32.5rem;
+    height: 20.75rem;
+    align-self: flex-start;
+    margin-top: -5rem;
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
+
+  .heading {
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -0.73px;
+    margin-top: 3.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .text {
+    width: 32.125rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .pricing-section {
+    background-color: black;
+    width: 43.5rem;
+    height: 37.5rem;
+    top: 15.625rem;
+    margin-top: 0;
+  }
+
+  .overflow-wrapper {
+    overflow: hidden;
+  }
+
+  .pricing-bg-img-1 {
+    width: 50%;
+    left: 11.875rem;
+    top: -4.375rem;
+  }
+
+  .mockup-img-box {
+    position: absolute;
+    width: 16.875rem;
+    height: 34.75rem;
+    top: -8.125rem;
+    left: 4.375rem;
+  }
+
+  .mockup-img {
+    width: 100%;
+  }
+
+  .pricing {
+    width: 24.9375rem;
+    top: 35%;
+    left: 35%;
+  }
+
+  .footer {
+    height: 12.25rem;
+    width: 43.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 0;
+  }
+
+  .footer-block {
+    height: 8.9375rem;
+    margin-bottom: 0px;
+  }
+
+  .social-media-icons-container {
+    align-self: center;
+  }
+}
+
+@media (min-device-width: 1200px) {
+  .container::before {
+    content: "";
+    position: absolute;
+    width: 66%;
+    height: 29.25rem;
+    background-image: url(assets/bg-pattern-1.svg);
+    left: 70.625rem;
+    top: -2.5rem;
+    z-index: 2;
+  }
+
+  .container {
+    width: 90rem;
+    height: 114.5rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    background-image: url(assets/bg-main-desktop.png);
+    width: 107rem;
+    height: 68%;
+    left: -150px;
+    top: -250px;
+    background-image: url(assets/bg-main-tablet.png);
+    background-position-x: right;
+    z-index: 1;
+  }
+
+  .section-header {
+    width: 90rem;
+    margin-left: 15.625rem;
+  }
+
+  .section-logo-img {
+    width: 9.1312rem;
+    align-self: start;
+    margin-top: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .section-text {
+    width: 63.4375rem;
+    height: 19.875rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.25rem;
+  }
+
+  .heading {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    letter-spacing: -1px;
+    color: #191826;
+    margin-bottom: 2.5rem;
+    z-index: 3;
+  }
+
+  .text {
+    width: 51.5625rem;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    color: #191826;
+    z-index: 3;
+  }
+
+  .pricing-section {
+    width: 69.375rem;
+    top: 6.25rem;
+    margin-top: 11.25rem;
+  }
+
+  .pricing-bg-img-1 {
+    width: 30%;
+    left: 15.625rem;
+    top: -3.125rem;
+  }
+
+  .mockup-img-box {
+    position: absolute;
+    width: 17.5rem;
+    height: 37.875rem;
+    top: -12.5rem;
+    left: 4.375rem;
+  }
+
+  .pricing {
+    width: 27.875rem;
+    height: 39.0625rem;
+    top: 25%;
+    left: 45%;
+  }
+
+  .pricing-header {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    margin-bottom: 1.375rem;
+  }
+
+  .pricing-text {
+    width: 20.8125rem;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    margin-bottom: 3rem;
+  }
+
+  .pricing-price {
+    margin-bottom: 3.5625rem;
+  }
+
+  .btn-ios:link,
+  .btn-ios:visited,
+  .btn-android:link,
+  .btn-android:visited {
+    width: 20.8125rem;
+  }
+
+  .footer {
+    width: 69.375rem;
+    height: 6.25rem;
+    margin-bottom: 5.6875rem;
+  }
+
+  .footer-block {
+    width: 43.75rem;
+    height: 4.9375rem;
+    flex-direction: row;
+    gap: 6.25rem;
+  }
+
+  .footer-text {
+    line-height: 1.625rem;
+    margin-bottom: 5.6875rem;
+  }
+}
